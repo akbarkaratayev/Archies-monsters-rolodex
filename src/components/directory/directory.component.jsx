@@ -1,10 +1,11 @@
 import React from "react";
-import MenuItem from '../menu-item/menu-item.component'
+import MenuItem from "../menu-item/menu-item.component";
 import "./directory.style.scss";
 
 class Directory extends React.Component {
   constructor() {
     super();
+    this.size = " ";
 
     this.state = {
       sections: [
@@ -29,14 +30,12 @@ class Directory extends React.Component {
         {
           title: "women's",
           imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-          size: "large",
           id: 4,
           linkUrl: "shop/womens",
         },
         {
           title: "men's",
           imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-          size: "large",
           id: 5,
           linkUrl: "shop/mens",
         },
@@ -44,16 +43,28 @@ class Directory extends React.Component {
     };
   }
 
-  render(){
-    return(
-      <div className='directory-menu'>
-        {
-          this.state.sections.map(({id, ...otherSectionProps })=>(
-            <MenuItem key={id} {...otherSectionProps} />
-          ))
-        }
+  render() {
+    return (
+      <div className="directory-menu">
+        {this.state.sections.map(({ id, ...otherSectionProps }, index) => {
+          if (
+            this.state.sections.length % 3 === 1 &&
+            index === this.state.sections.length - 1
+          ) {
+            this.size = "super-large";
+          } else if (
+            this.state.sections.length % 3 === 2 &&
+            (index === this.state.sections.length - 1 ||
+              index === this.state.sections.length - 2)
+          ) {
+            this.size = "large";
+          } else {
+            this.size = " ";
+          }
+          return <MenuItem key={id} size = {this.size} {...otherSectionProps} />;
+        })}
       </div>
-    )
+    );
   }
 }
 
