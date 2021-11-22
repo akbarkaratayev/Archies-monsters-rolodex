@@ -16,7 +16,7 @@ Authors of idea: **[Yihua Zhang](https://github.com/ZhangMYihua)** and **[Andrei
 - Redux
 - Firebase
 
-This project's (mine to be exact) not been deployed YET!
+This project's not been deployed YET!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
