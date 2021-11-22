@@ -1,5 +1,6 @@
 
-# Project "Crown clothing", e-commerce for selling clothes and shoes
+# Project "Crown clothing"
+e-commerce for selling clothes and shoes
 
 ## Description
 
