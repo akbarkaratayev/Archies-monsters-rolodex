@@ -2,6 +2,8 @@
 # Project "Crown clothing"
 e-commerce for selling clothes and shoes
 
+[Heroku link](https://akbar-crown-live.herokuapp.com/)
+
 ## Description
 
 This project is being bult by Karatyev Akbarjon mainly in order to get practical experience in using React and Redux. IDEA IS NOT MINE. All copyrights reserved to their respective owners. 
